@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practica.css">
+</head>
+<style>
+  @media(max-width:1425px){
+    .tabla{
+      display: none;
+    }
+    #bttn{
+     grid-column: 1/3;
+     height: 35px;
+     margin-top: -75px;
+   }
+   .orden{
+     display: grid;
+     
+   }
+  }
+  @media(max-width:900px){
+    .tabla{
+      display: grid;
+      grid-template-rows: 33% 33% 33%;
+      grid-row: 1/2;
+     height: 200px;
+     width: 100%;
+     margin-bottom: 50px;
+    }
+   
+    .orden{
+      display: grid;
+      grid-template-rows: 40% 40% 10%;
+    }
+    #Calen{
+   height: 10px;
+   grid-column: 1/3;
+    }
+    #Numeros{
+      height: 10px;
+      background: rgba(0, 0, 0, 0.55);
+      width: 100%;
+      text-align: center;
+      grid-column: 1/3;
+    }
+   #bttn{
+     grid-row: 3/4;
+     grid-column: 1/3;
+     height: 35px;
+     margin-top: 78px;
+    
+     
+   }
+   a{
+      font-size: large;
+   }
+   #bttn1{
+     grid-row: 3/4;
+     grid-column: 1/3;
+     height: 35px;
+     margin-top: 164px;
+     
+   }
+   #compras{
+     grid-row: 2/3;
+     margin-top: 62px;
+   }
+   #prueba{
+     height: 93%;
+     padding-right: 20px;
+   }
+   .Productos{
+ margin-left: 18px;
+   }
+   .texto{
+padding-left: 10px;
+   }
+   button{
+    text-decoration: none;
+     background: none;  
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+    padding: 3px 272px ;
+    font-family: sans-serif;
+    font-size: large;
+   }
+  }
+</style>
+<body onload="inicio()">
+    <div class="genera">
+    <div id="prueba" class="anuncios">
+        <img  class="fotosProductos " src="https://images.pexels.com/photos/1030946/pexels-photo-1030946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+        <h2 class="Productos">sweater wool</h2>
+        <hr></hr>
+        <p class="texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid assumenda beatae non ea enim consectetur voluptatem obcaecati temporibus libero ipsa et nemo reiciendis necessitatibus veniam tempora eius, ratione sequi? Ducimus!</p>
+        <hr></hr>
+       
+      </div>
+      <div class="orden" >
+        <form action="">
+    <table id="compras" height="290px" width="150px"   border="1" bordercolor="#f5f5f5" bgcolor="#07031a">
+        <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio por unidad</th>
+        <th>Precio Total</th>
+       </tr>
+       <tr>
+           <td><select name="" id=""><option value="">sweater wool</option></select></td>
+           <td><input id="cantidad" value="1" autofocus required title="coloque cantidad" placeholder="Cantidad de producto que quiere comprar" type="number" min="1" max="10"></td>
+           <td><input id="precioU" type="text"></td>
+           <td><input id="PT" type="text"></td>
+       </tr>
+       <tr>
+           <td> Fecha de entrega:</td>
+           <td ><input id="fechaE" type="text" required title="Coloque fecha de entrega"></td>
+           <td  align="right" colspan="1">Subtotal:</td>
+           <td><input id="subtotal" type="text"></td>
+         </tr>
+         <tr>
+           <td align="right"colspan="3">Impuesto de Venta:</td>
+           <td><input  id="impuesto"type="text"></td>
+         </tr>
+         <tr>
+         <td  align="right" colspan="3">Total:</td>
+         <td><input   id="total"type="text"></td>
+        </tr>
+    </table> 
+     <div id="bttn" type="submit" class="Tabla botones color-botones">
+        <!-- <a  align="middle" class=" texto"  type="submit">Comprar</a> -->
+        <button  type="submit">Comprar</button>
+      </div> 
+      
+  </form>
+  
+    <div class="tabla">
+  <table id="Calen" align="center" >
+    <tr>
+       <th><h4 >Mes</h4></th>
+    <th>
+      <form action="">
+      <select onclick="DateC()" id="Calendario" >  
+      <option value="Enero" selected>Enero</option>
+      <option  value="Febrero"> Febrero</option>
+      <option value="Marzo">Marzo</option>
+      <option value="Abril">Abril</option>
+      <option value="Mayo">Mayo</option>
+      <option value="Junio">Junio</option>
+      <option value="Julio">Julio</option>
+      <option value="Agosto">Agosto</option>
+      <option value="Septiembre">Septiembre</option>
+      <option value="Octubre">Octubre</option>
+      <option value="Noviembre">Noviembre</option>
+      <option value="Diciembre">Diciembre</option>
+    </select>
+  </form>
+  </th>
+    </tr>
+  </table>
+<table class="Numeros1" id="Numeros" align="center" CELLPADDING="7px" width="10px" >
+<tr>
+  <td onclick="Fecha()"class="queta">1</td>
+  <td onclick="Fecha()" class="queta">2</td>
+  <td onclick="Fecha()" class="queta">3</td>
+  <td onclick="Fecha()" class="queta">4</td>
+  <td onclick="Fecha()" class="queta">5</td>
+  <td onclick="Fecha()" class="queta">6</td>
+</tr>
+<tr>
+  <td onclick="Fecha()" class="queta">7</td>
+  <td onclick="Fecha()" class="queta">8</td>
+  <td onclick="Fecha()" class="queta">9</td>
+  <td onclick="Fecha()" class="queta">10</td>
+  <td onclick="Fecha()" class="queta">11</td>
+  <td onclick="Fecha()" class="queta">12</td>
+</tr>
+<tr>
+  <td onclick="Fecha()" class="queta">13</td>
+  <td onclick="Fecha()" class="queta">14</td>
+  <td onclick="Fecha()" class="queta">15</td>
+  <td onclick="Fecha()" class="queta">16</td>
+  <td onclick="Fecha()" class="queta">17</td>
+  <td onclick="Fecha()" class="queta">18</td>
+</tr>
+<tr>
+  <td onclick="Fecha()" class="queta">19</td>
+  <td onclick="Fecha()" class="queta">20</td>
+  <td onclick="Fecha()" class="queta">21</td>
+  <td onclick="Fecha()" class="queta">22</td>
+  <td onclick="Fecha()" class="queta">23</td>
+  <td onclick="Fecha()" class="queta">24</td>
+</tr>
+<tr>
+  <td onclick="Fecha()" class="queta">25</td>
+  <td onclick="Fecha()" class="queta">26</td>
+  <td onclick="Fecha()" class="queta">27</td>
+  <td onclick="Fecha()" class="queta">28</td>
+  <td onclick="Fecha()" class="queta">29</td>
+  <td onclick="Fecha()" class="queta">30</td>
+</tr>
+<tr>
+  <td onclick="Fecha()" class="queta">31</td>
+</tr>
+</table>
+<div  id="bttn1"class="Tabla botones color-botones">
+  <div onclick="Comfirmar()"> 
+    <a  align="middle" class=" texto"  type="submit">Comfirmar fecha de entrega</a>
+  </div>
+</div>
+
+      </div>
+   
+    </div>
+</div>
+
+<script>
+  var costee=1.99
+  var impuesto=1
+  function inicio(){
+    var vuelta=null
+ vuelta=setTimeout("inicio()",1000)
+var cantidad=document.getElementById("cantidad").value;
+var precioU=document.getElementById("precioU");
+var PT=document.getElementById("PT");
+var subtotal=document.getElementById("subtotal");
+var impuestos=document.getElementById("impuesto");
+var total =document.getElementById("total")
+switch(cantidad){
+  case "":
+  precioU.value=""
+  PT.value=""
+  subtotal.value=""
+   impuestos.value=""
+   total.value=""
+  break;
+ case "10":
+  precioU.value=costee+"$";
+  PT.value=costee*10+"$";
+  subtotal.value=costee*10+"$";
+   impuestos.value=costee*10-impuesto*10+"$"
+  
+   var totall=new String( total.value=costee*10-impuesto*10)
+
+   total.value=totall.substring(0,4)+"$"
+ break;
+ case "9":
+  precioU.value=costee+"$";
+  PT.value=costee*9;
+  subtotal.value=costee*9+"$";
+   impuestos.value=costee*9-impuesto*9
+   total.value=costee*9-impuesto*9
+ break;
+ case "8":
+  precioU.value=costee+"$";
+  PT.value=costee*8;
+  subtotal.value=costee*8+"$";
+   impuestos.value=costee*8-impuesto*8
+   total.value=costee*8-impuesto*8
+ break;
+ case "7":
+  precioU.value=costee+"$";
+  PT.value=costee*7;
+  subtotal.value=costee*7+"$";
+   impuestos.value=costee*7-impuesto*7
+   total.value=costee*7-impuesto*7
+ break;
+ case "6":
+  precioU.value=costee+"$";
+  PT.value=costee*6;
+  subtotal.value=costee*6+"$";
+   impuestos.value=costee*6-impuesto*6
+   var V6=new String( total.value=costee*6-impuesto*6)
+
+total.value=V6.substring(0,4)+"$"
+  
+ break;
+ case "5":
+  precioU.value=costee+"$";
+  PT.value=costee*5;
+  subtotal.value=costee*5+"$";
+   impuestos.value=costee*5-impuesto*5
+   var V5=new String( total.value=costee*5-impuesto*5)
+
+total.value=V5.substring(0,4)+"$"
+   
+ break;
+ case "4":
+  precioU.value=costee+"$";
+  PT.value=costee*4;
+  subtotal.value=costee*4+"$";
+   impuestos.value=costee*4-impuesto*4
+   total.value=costee*4-impuesto*4
+ break;
+ case "3":
+  precioU.value=costee+"$";
+  PT.value=costee*3;
+  subtotal.value=costee*3+"$";
+   impuestos.value=costee*3-impuesto*3
+   var totall=new String( total.value=costee*3-impuesto*3)
+
+total.value=totall.substring(0,4)+"$"
+  
+ break;
+ case "2":
+  precioU.value=costee+"$";
+  PT.value=costee*2;
+  subtotal.value=costee*2+"$";
+   impuestos.value=costee*2-impuesto*2
+   total.value=costee*2-impuesto*2
+ break;
+ case "1":
+  precioU.value=costee+"$";
+  PT.value=costee*1;
+  subtotal.value=costee*1+"$";
+   impuestos.value=costee*1-impuesto*1
+   total.value=costee*1-impuesto*1
+ break;
+
+} 
+
+  }
+
+  
+// Calendario.value="Enero"
+  var btn=document.getElementById("bttn")
+ btn.addEventListener("click",function(){ 
+   console.log(fechaEntrega.value)
+   if(fechaEntrega.value===""){
+    
+   }else{
+  alert("Gracias por tu compra vuelva pronto")
+  if(alert=true){
+     var asd=window.close() ;
+   var er=null
+   er=setTimeout(asd,1000)
+  }
+  
+   }
+
+ })
+
+
+
+
+
+let dia=[]
+let mes=[]
+console.log(dia.length)
+var numeros=document.getElementById("Numeros");
+ 
+DateC=()=>{
+   var Calendario=document.getElementById("Calendario").value;
+
+   console.log(numeros)
+   switch(Calendario){
+       case "Enero": 
+        mes.splice(enero);
+         var enero=01 
+         mes.push(enero)
+        
+           console.log(Calendario)
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>
+           <td onclick="Fecha()" class="queta">30</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">31</td>
+         </tr>`
+       break;
+       case "Febrero":
+           console.log(Calendario)
+            mes.splice(febrero);
+           var febrero=02
+         mes.push(febrero)
+      
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>`
+       break;
+       case "Marzo":
+           console.log(Calendario)
+           mes.splice(marzo);
+           var marzo=03
+         mes.push(marzo)
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>
+           <td onclick="Fecha()" class="queta">30</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">31</td>
+         </tr>`
+       break;
+       case "Abril":
+       mes.splice(abril);
+       var abril=04
+         mes.push(abril)
+           console.log(Calendario)
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>
+           <td onclick="Fecha()" class="queta">30</td>
+         </tr>
+         `
+       break;
+       case "Mayo":
+           console.log(Calendario)
+           mes.splice(mayo);
+           var mayo=05
+         mes.push(mayo)
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>
+           <td onclick="Fecha()" class="queta">30</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">31</td>
+         </tr>`
+       break;
+       case "Junio":
+           console.log(Calendario)
+           mes.splice(junio);
+           var junio=06
+         mes.push(junio)
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>
+           <td onclick="Fecha()" class="queta">30</td>
+         </tr>
+        `
+       break;
+       case "Julio":
+           console.log(Calendario)
+           mes.splice(julio);
+           var julio=07
+         mes.push(julio)
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>
+           <td onclick="Fecha()" class="queta">30</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">31</td>
+         </tr>`
+       break;
+       case "Agosto":
+           console.log(Calendario)
+           mes.splice(agosto);
+           var agosto=08
+         mes.push(agosto)
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>
+           <td onclick="Fecha()" class="queta">30</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">31</td>
+         </tr>`
+       break;
+       case "Septiembre":
+           console.log(Calendario)
+           mes.splice(septiembre);
+           var septiembre=09
+         mes.push(septiembre)
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>
+           <td onclick="Fecha()" class="queta">30</td>
+         </tr>
+       `
+       break;
+       case "Octubre":
+           console.log(Calendario) 
+           mes.splice(octubre);
+           var octubre=10
+          
+         mes.push(octubre)
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>
+           <td onclick="Fecha()" class="queta">30</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">31</td>
+         </tr>`
+       break;
+       case "Noviembre":
+           console.log(Calendario)
+           mes.splice(noviembre);
+           var noviembre=11
+         mes.push(noviembre)
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>
+           <td onclick="Fecha()" class="queta">30</td>
+         </tr>
+        `
+       break;
+       case "Diciembre":
+           console.log(Calendario)
+           mes.splice(diciembre);
+           var diciembre=12
+         mes.push(diciembre)
+           numeros.innerHTML=`<tr>
+           <td onclick="Fecha()" class="queta">1</td>
+           <td onclick="Fecha()" class="queta">2</td>
+           <td onclick="Fecha()" class="queta">3</td>
+           <td onclick="Fecha()" class="queta">4</td>
+           <td onclick="Fecha()" class="queta">5</td>
+           <td onclick="Fecha()" class="queta">6</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">7</td>
+           <td onclick="Fecha()" class="queta">8</td>
+           <td onclick="Fecha()" class="queta">9</td>
+           <td onclick="Fecha()" class="queta">10</td>
+           <td onclick="Fecha()" class="queta">11</td>
+           <td onclick="Fecha()" class="queta">12</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">13</td>
+           <td onclick="Fecha()" class="queta">14</td>
+           <td onclick="Fecha()" class="queta">15</td>
+           <td onclick="Fecha()" class="queta">16</td>
+           <td onclick="Fecha()" class="queta">17</td>
+           <td onclick="Fecha()" class="queta">18</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">19</td>
+           <td onclick="Fecha()" class="queta">20</td>
+           <td onclick="Fecha()" class="queta">21</td>
+           <td onclick="Fecha()" class="queta">22</td>
+           <td onclick="Fecha()" class="queta">23</td>
+           <td onclick="Fecha()" class="queta">24</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">25</td>
+           <td onclick="Fecha()" class="queta">26</td>
+           <td onclick="Fecha()" class="queta">27</td>
+           <td onclick="Fecha()" class="queta">28</td>
+           <td onclick="Fecha()" class="queta">29</td>
+           <td onclick="Fecha()" class="queta">30</td>
+         </tr>
+         <tr>
+           <td onclick="Fecha()" class="queta">31</td>
+         </tr>`
+       break;
+
+   }
+   console.log(mes)
+}
+   DateC()
+
+ Fecha=()=>{
+ var ajax=document.addEventListener("click",function(e){
+e.preventDefault()
+    var intento=e.target
+    // console.log(intento)
+    var prueba=Numeros
+  //  console.log(prueba.children[0].children.length)
+   var fix=prueba.children[0].children
+ 
+for(var t=0;t<fix.length;t++){
+// console.log(fix[t].children) 
+let fix2=fix[t].children
+for(var y=0;y<fix2.length;y++){
+  //  console.log(fix2[y].innerHTML)
+  let fix3=fix2[y].innerHTML
+  // if(fix3=){
+  //  asd.push(intento.innerHTML)
+  // }
+  switch(fix3=intento.innerHTML){
+case "1":{
+  dia.splice(f1)
+  var f1=01 
+  dia.push(f1)
+  intento.style.backgroundColor="#c81912"
+
+ break;
+}
+ case "2":{
+  dia.splice(f2)
+  var f2=02
+  dia.push(f2)
+  intento.style.backgroundColor="#c81912" 
+  
+ break;
+ }
+ case "3":{
+  dia.splice(f3)
+  var f3=03
+  dia.push(f3)
+ intento.style.backgroundColor="#c81912"
+
+  break;
+ }
+ case "4":{
+  dia.splice(f4)
+  var f4=04
+  dia.push(f4)
+ intento.style.backgroundColor="#c81912"
+
+  break;
+ }
+ case "5":{
+  dia.splice(f5)
+  var f5=05
+  dia.push(f5)
+ intento.style.backgroundColor="#c81912"
+
+ 
+  break;
+ }
+ case "6":{
+  dia.splice(f6)
+  var f6=06
+  dia.push(f6)
+ intento.style.backgroundColor="#c81912"
+
+
+  break;
+ }
+ case "7":{
+  dia.splice(f7)
+  var f7=07
+  dia.push(f7)
+ intento.style.backgroundColor="#c81912"
+
+ 
+  break;
+ }
+ case "8":{
+  dia.splice(f8)
+  var f8=08
+  dia.push(f8)
+ intento.style.backgroundColor="#c81912"
+
+ 
+  break;
+ }
+ case "9":{
+  dia.splice(f9)
+  var f9=09
+  dia.push(f9)
+ intento.style.backgroundColor="#c81912"
+
+ 
+  break;
+ }
+ case "10":{
+ 
+  dia.splice(f10)
+  var f10=10
+  dia.push(f10)
+ intento.style.backgroundColor="#c81912"
+
+  break;
+ }
+ case "11":{
+  dia.splice(f11)
+  var f11=11
+  dia.push(f11)
+ intento.style.backgroundColor="#c81912"
+
+ 
+  break;
+ }
+ case "12":{
+  dia.splice(f12)
+  var f12=12
+  dia.push(f12)
+ intento.style.backgroundColor="#c81912"
+
+ 
+  break;
+ }
+ case "13":{
+ 
+  dia.splice(f13)
+  var f13=13
+  dia.push(f13)
+ intento.style.backgroundColor="#c81912"
+
+  break;
+ }
+ case "14":{
+  dia.splice(f14)
+  var f14=14
+  dia.push(f14)
+ intento.style.backgroundColor="#c81912"
+
+  
+  break;
+ }
+ case "15":{
+  dia.splice(f15)
+  var f15=15
+  dia.push(f15)
+ intento.style.backgroundColor="#c81912"
+
+ 
+  break;
+ }
+ case "16":{
+ 
+  dia.splice(f16)
+  var f16=16
+  dia.push(f16)
+ intento.style.backgroundColor="#c81912"
+
+  break;
+ }
+ case "17":{
+  dia.splice(f17)
+  var f17=17
+  dia.push(f17)
+ intento.style.backgroundColor="#c81912"
+
+  
+  break;
+ }
+ case "18":{
+  dia.splice(f18)
+  var f18=18
+  dia.push(f18)
+ intento.style.backgroundColor="#c81912"
+
+  
+  break;
+ }
+ case "19":{
+  dia.splice(f19)
+  var f19=19
+  dia.push(f19)
+ intento.style.backgroundColor="#c81912"
+
+ 
+  break;
+ }
+ case "20":{
+  dia.splice(f20)
+  var f20=20
+  dia.push(f20)
+ intento.style.backgroundColor="#c81912"
+
+  
+  break;
+ }
+ case "21":{
+  dia.splice(f21)
+  var f21=21
+  dia.push(f21)
+ intento.style.backgroundColor="#c81912"
+
+ 
+  break;
+ }
+ case "22":{
+ 
+  dia.splice(f22)
+  var f22=22
+  dia.push(f22)
+ intento.style.backgroundColor="#c81912"
+
+  break;
+ }
+ case "23":{
+  dia.splice(f23)
+  var f23=23
+  dia.push(f23)
+ intento.style.backgroundColor="#c81912"
+
+ 
+  break;
+ }
+ case "24":{
+ 
+  dia.splice(f24)
+  var f24=24
+  dia.push(f24)
+ intento.style.backgroundColor="#c81912"
+
+  break;
+ }
+ case "25":{
+ 
+  dia.splice(f25)
+  var f25=25
+  dia.push(f25)
+ intento.style.backgroundColor="#c81912"
+
+  break;
+ }
+ case "26":{
+  dia.splice(f26)
+  var f26=26
+  dia.push(f26)
+ intento.style.backgroundColor="#c81912"
+
+  
+  break;
+ }
+ case "27":{
+  dia.splice(f27)
+  var f27=27
+  dia.push(f27)
+ intento.style.backgroundColor="#c81912"
+
+  
+  break;
+ }
+ case "28":{
+  dia.splice(f28)
+  var f28=28
+  dia.push(f28)
+ intento.style.backgroundColor="#c81912"
+
+  
+  break;
+ }
+ case "29":{
+ 
+  dia.splice(f29)
+  var f29=29
+  dia.push(f29)
+ intento.style.backgroundColor="#c81912"
+
+  break;
+ }
+ case "30":{
+ 
+  dia.splice(f30)
+  var f30=30
+  dia.push(f30)
+ intento.style.backgroundColor="#c81912"
+
+  break;
+ }
+ case "31":{
+  dia.splice(f31)
+  var f31=31
+  dia.push(f31)
+ intento.style.backgroundColor="#c81912"
+
+ 
+  break;
+ }
+
+}
+document.addEventListener("dblclick",function(e){
+   e.preventDefault()
+    var prueba1=e.target
+    prueba1.style.backgroundColor=""
+    if(dia.length>1){
+   fechaEntrega.value=""
+    }
+ })
+}
+}
+
+
+
+})
+
+
+
+console.log(dia)
+   
+}
+
+
+var ejm4=new Date()
+var Dia=ejm4.getDate()
+var Mes=ejm4.getMonth()+1
+var Año=ejm4.getFullYear()
+var prueba1=new Boolean(prueba.innerHTML)
+var btn=document.getElementById("bttn1");
+var fechaEntrega= document.getElementById("fechaE");
+ fechaEntrega.value=""
+console.log(prueba1)
+console.log(Dia+" "+Mes+" "+ Año)
+
+Comfirmar=()=>{
+ var dios=document.addEventListener("click",function(e){
+   e.preventDefault()
+ if(dia.length===0){
+   var A=""
+dia.push(A)
+ }
+ 
+    // console.log(asd)
+    var prueba2=new Boolean(Comfirmar())
+     console.log(prueba2)
+   
+// if(prueba.innerHTML===){
+
+// }
+  //  var ejm=e.target.innerHTML 
+  //  var ejm1= new String(ejm)
+  //  console.log(ejm1.split(" "))
+  //   asd.push(ejm1)
+  //   console.log(asd)
+   // console.log(Calendario.value)
+    // console.log(Numeros.childNodes[1].children)
+    // console.log(Numeros)
+    
+  var example=document.getElementsByClassName("Numeros1")
+  //  console.log(example.Numeros.childNodes[1].children) 
+   console.log(example[0].children[0].children)
+  var pt=example[0].children[0].children
+  
+   for(var i=0;i<pt.length;i++){
+    //  console.log(pt[i].children)
+  //   // console.log(pt[i].children.length)
+   var mas=pt[i].children
+   for(var e=0;e<mas.length;e++){
+    // console.log(mas[e].innerHTML)
+  //     var lu=prueba=mas[e].innerHTML
+    if(prueba1=true && !prueba2==false){
+       fechaEntrega.value=dia[0]+"/"+mes[0]+"/"+Año
+  console.log("paso")
+   console.log(prueba===mas[e].innerHTML)
+    }
+    break
+   }
+   break
+  }
+ })
+  
+}
+
+</script>
+</body>
+</html>
