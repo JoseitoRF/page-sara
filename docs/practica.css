@@ -376,7 +376,7 @@ align-content: center;
 }
 .buscador1{ 
     margin-left: 1px;
-    width: 96%;
+    width: 97%;
 }
 .menu{
     grid-template-columns: 100%;
@@ -392,6 +392,9 @@ align-content: center;
 }
 .item3{
     grid-column: 1/4;
+    /* margin-right: -10px; */
+    width: 1024px;
+    padding-right: 0px;
 }
 .art2{
     grid-row: 3/4;
@@ -438,6 +441,11 @@ align-content: center;
     grid-template-columns: 50% 50%;
     /* grid-template-rows: 20% 20% 20% 20% 20%; */
     grid-gap: 10px;
+    padding-right: 13px;
+    padding-left: 13px;
+}
+.anuncios{
+    width: 97%
 }
 
 }
@@ -451,6 +459,12 @@ align-content: center;
     border-radius: 0px;
     border-bottom: 1px solid white;
 }
+.item3{
+    width: 768px;
+    padding-right: 0px;
+}
+
+
 .item4{
     margin-right: 0px;
     margin-left: 0px;
@@ -460,7 +474,10 @@ align-content: center;
     header{
         width: 736px
     }
- 
+ .item3{
+     width: 736px;
+     padding-right: 0px;
+ }
 
 .encabezado{ 
     font-size: 21px;
@@ -472,6 +489,7 @@ align-content: center;
     margin-right: 0px;
     margin-left: 0px;
 }
+
 
 }
 @media(max-width:414px){
@@ -486,6 +504,18 @@ align-content: center;
 .todo{
     grid-template-columns: 100%;
     /* grid-template-rows: 13% 12% 12% 12% 12% 12% 12% 12%; */
+    padding-right: 13px;
+    padding-left: 13px;
+}
+.anuncios{
+    width: 100%;
+}
+.buscador1{
+    width: 94%;
+}
+.item3{
+width: 414px;
+padding-right: 0px;
 }
 .art{
 grid-row: 2/3;
@@ -517,7 +547,7 @@ h5{
     font-size: 11px;
 }
 #reloj{
-    margin-left: 140px;
+   
     font-size: 11px;
 }
 }
