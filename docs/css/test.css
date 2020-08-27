@@ -1,0 +1,96 @@
+body {
+    background: #aeeff0
+    }
+nav{
+    background: #daa592;
+    display: flex;
+    justify-content:space-around
+}
+.marcos{
+    background: #ff0000;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+    padding: 15px;
+    font-size: 20px;
+    width: 20%
+}
+.marcos:hover{
+    background: #1100ff;
+    padding: 50px
+}
+.marcos:active{
+    background: #3cff00;
+}
+section{
+    background: #f0e3c4;
+    display: inline-block;
+    width: 15%
+
+}
+header{
+    display: flex;
+     
+}
+.mongo{
+    display:inline-flex;
+    width: 15%;
+   justify-content: left ;
+    
+}
+.to{
+   margin-left: 180px;
+   font-size: 60px
+}
+.unico{
+    display: inline-flex;
+    background: #daa592;
+   width: 70%;
+   padding: 50px;
+   margin-bottom: 110px
+}
+.todo{
+    background: #f0e3c4;
+    padding: 15px;
+    margin: 10px;
+    display: none
+
+}
+.padre{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.mongot{
+color: #f1f0d1;
+
+
+}
+article{
+    background: grey ;
+    width: 85%;
+    flex: 1 1 auto
+}
+@media(max-width:600px){
+   .marcos{
+       display: flex;
+       width: 89%
+   }
+   nav{
+       display: block
+   }
+
+ 
+   .todo{
+       display: inline-block;
+       width: 97%
+   }
+   h2{
+       display: flex;
+       
+       padding: 10px 0px
+   }
+   .puss{
+       display: none
+   }
+}

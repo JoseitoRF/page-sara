@@ -1,0 +1,128 @@
+h2{
+    color: rgb(39, 201, 255);
+    margin-left: 20px;margin-bottom: 100px
+}
+h1{
+    color:purple;font-size: 50px;
+    margin: 50px 400px
+}
+ .General{
+     margin: 0 auto;
+     display:flex;
+     text-align: center;
+     flex-wrap: wrap
+ }  
+ .grande{
+     font-size: 40px
+ } 
+ .especifico{
+     width: 24%;
+     background: #1ee3cf;
+     margin: 0 auto;
+     border-radius: 10px;
+     border: 2px solid blue;
+     box-shadow: 10px 10px 5px burlywood;
+     box-sizing: border-box;
+     margin-bottom: 10px;
+ }
+ .pequeño{
+     font-size: 50px ;
+     color: #e42c64
+ }
+ .ancla{
+     background: #e42c64;
+     text-decoration: none;
+    margin-bottom: 10px;
+     display: block;
+     padding: 10px ;
+     font-size: 30px;
+    margin: 10px;
+    border:5px solid blueviolet;
+    border-radius: 10px
+ }
+.ancla:hover{
+    color: #323232;
+    background:blue
+}
+.ancla:active{
+    color: blueviolet;
+    background: #1ee3cf
+}
+#unico{
+    color:violet
+}
+.rose{
+    color:goldenrod
+}
+.fondo{
+    background: #323232
+}
+.mongolo{
+background: #d61d4e;
+padding: 100px
+}
+p{
+   color: black;
+   font-size: 20px;
+    
+display: inline-flex
+}
+.prueba{
+    color: rgba(238, 17, 120, 0.397)
+}
+.exp{
+    background: #e42c64;
+    color: #614ad3;
+    display: inline-block;
+    width:5%;
+    margin: 10px;
+    text-decoration: none;
+}
+.exp:hover{
+    background: #dff0ea
+}
+.exp:active{
+    background: #1ee3cf
+}
+body{
+    background:black;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100
+}
+.umo{
+    display: flex;
+    background: #d61d4e;
+    margin: 10px;
+    padding: 15px ;
+    width: 20%;
+}
+.unico{
+display: inline-flex;
+}
+
+nav{
+    background: #daa592;
+    display: flex;
+    justify-content: space-around
+}
+@media(max-width:600px) {
+    nav{
+        background: #1ee3cf
+    }
+    .exp{
+        margin: 5px;
+        padding: 5px;
+        background: #614ad3;
+    }
+    nav{
+        flex-direction: column
+    }
+    .especifico{
+        width: 47%
+    }
+}
+@media(max-width:400px){
+    .especifico{
+        width: 60%
+    }
+}
