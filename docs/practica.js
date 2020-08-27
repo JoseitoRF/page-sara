@@ -747,17 +747,18 @@ logo.addEventListener("click",function(){
  
 addEventListener("keyup",function(){
   var lupa=document.getElementsByClassName("buscador1")[0].value;
+  console.log(lupa.toLowerCase())
   var asd2=document.getElementsByClassName("anuncios");
  
   
   for(var i=0;i<asd2.length;i++){
     var arr= new String(asd2[i].childNodes[3].innerHTML)
     
-    console.log(arr.indexOf(lupa))
+    console.log(arr.indexOf(lupa.toLowerCase()))
 
-    var motor= lupa===asd2[i].childNodes[3].innerHTML
+    var motor= lupa.toLowerCase()===asd2[i].childNodes[3].innerHTML
 
-    if(arr.indexOf(lupa)===-1){
+    if(arr.indexOf(lupa.toLowerCase())===-1){
       asd2[i].style.display="none"
     }else {
       asd2[i].style.display="grid"
