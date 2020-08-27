@@ -255,7 +255,7 @@ aside{
 .genera{
     display: grid;
    grid-gap: 10px;
-    grid-template-columns: 25% 15%;
+    grid-template-rows: 80% 20%
     
     
 }

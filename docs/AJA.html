@@ -28,12 +28,13 @@
       grid-row: 1/2;
      height: 200px;
      width: 100%;
-     margin-bottom: 50px;
+     /* margin-bottom: 56%; */
     }
    
     .orden{
       display: grid;
       grid-template-rows: 40% 40% 10%;
+      margin-top: -356px
     }
     #Calen{
    height: 10px;
@@ -66,10 +67,11 @@
    }
    #compras{
      grid-row: 2/3;
-     margin-top: 62px;
+     margin-top: -68px;
+     width: 900px;
    }
    #prueba{
-     height: 93%;
+     height: 20%;
      padding-right: 20px;
    }
    .Productos{
@@ -90,6 +92,13 @@ padding-left: 10px;
     font-family: sans-serif;
     font-size: large;
    }
+   .fotosProductos{
+     width: 97%;
+     height: 70%;
+margin-left: 20px;
+margin-top: 10px;
+border-radius: 4px;
+   }
   }
 </style>
 <body onload="inicio()">
@@ -99,45 +108,11 @@ padding-left: 10px;
         <h2 class="Productos">sweater wool</h2>
         <hr></hr>
         <p class="texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid assumenda beatae non ea enim consectetur voluptatem obcaecati temporibus libero ipsa et nemo reiciendis necessitatibus veniam tempora eius, ratione sequi? Ducimus!</p>
-        <hr></hr>
+        
        
       </div>
       <div class="orden" >
-        <form action="">
-    <table id="compras" height="290px" width="150px"   border="1" bordercolor="#f5f5f5" bgcolor="#07031a">
-        <tr>
-        <th>Producto</th>
-        <th>Cantidad</th>
-        <th>Precio por unidad</th>
-        <th>Precio Total</th>
-       </tr>
-       <tr>
-           <td><select name="" id=""><option value="">sweater wool</option></select></td>
-           <td><input id="cantidad" value="1" autofocus required title="coloque cantidad" placeholder="Cantidad de producto que quiere comprar" type="number" min="1" max="10"></td>
-           <td><input id="precioU" type="text"></td>
-           <td><input id="PT" type="text"></td>
-       </tr>
-       <tr>
-           <td> Fecha de entrega:</td>
-           <td ><input id="fechaE" type="text" required title="Coloque fecha de entrega"></td>
-           <td  align="right" colspan="1">Subtotal:</td>
-           <td><input id="subtotal" type="text"></td>
-         </tr>
-         <tr>
-           <td align="right"colspan="3">Impuesto de Venta:</td>
-           <td><input  id="impuesto"type="text"></td>
-         </tr>
-         <tr>
-         <td  align="right" colspan="3">Total:</td>
-         <td><input   id="total"type="text"></td>
-        </tr>
-    </table> 
-     <div id="bttn" type="submit" class="Tabla botones color-botones">
-        <!-- <a  align="middle" class=" texto"  type="submit">Comprar</a> -->
-        <button  type="submit">Comprar</button>
-      </div> 
-      
-  </form>
+   
   
     <div class="tabla">
   <table id="Calen" align="center" >
@@ -216,6 +191,42 @@ padding-left: 10px;
 
       </div>
    
+     <form action="">
+    <table id="compras" height="290px"  border="1" bordercolor="#f5f5f5" bgcolor="#07031a">
+        <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio por unidad</th>
+        <th>Precio Total</th>
+       </tr>
+       <tr>
+           <td><select name="" id=""><option value="">sweater wool</option></select></td>
+           <td width="100px"><input  id="cantidad" value="1" autofocus required title="coloque cantidad" placeholder="Cantidad de producto que quiere comprar" type="number" min="1" max="10"></td>
+           <td width="100px"><input id="precioU" type="text"></td>
+           <td><input id="PT" type="text" size="65px"></td>
+       </tr>
+       <tr>
+           <td> Fecha de entrega:</td>
+           <td ><input id="fechaE" type="text" required title="Coloque fecha de entrega"></td>
+           <td  align="right" colspan="1">Subtotal:</td>
+           <td><input id="subtotal" type="text" size="65px"></td>
+         </tr>
+         <tr>
+           <td align="right"colspan="3">Impuesto de Venta:</td>
+           <td><input  id="impuesto"type="text" size="65px"></td>
+         </tr>
+         <tr>
+         <td  align="right" colspan="3">Total:</td>
+         <td><input   id="total"type="text" size="65px"></td>
+        </tr>
+    </table> 
+     <div id="bttn" type="submit" class="Tabla botones color-botones">
+        <!-- <a  align="middle" class=" texto"  type="submit">Comprar</a> -->
+        <button  type="submit">Comprar</button>
+      </div> 
+      
+  </form>
+
     </div>
 </div>
 
