@@ -79,6 +79,19 @@ body{
    
   
 }
+.categorias{
+    text-decoration: none;
+    color: #f6eedf;
+    font-weight: 600;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.categoria{
+    background: #c81912;
+    border-radius: 100px;
+    margin: 0 5px 5px 5px;
+    padding: 2px;
+}
  .encabezado{ 
     /* padding-top: 20px; */
     font-size: 11px;
@@ -225,6 +238,7 @@ td{
 .Tabla{
     grid-row: 2/3;
    margin-top: 10px;
+  
 
 }
 select{
@@ -361,6 +375,7 @@ align-content: center;
     border-radius: 4px;
     padding-top: 5px;
     margin: 0 5px 0 5px;
+    padding-bottom: 1px;
 }
 @media(max-width:1024px){
     header{
@@ -464,7 +479,6 @@ align-content: center;
     padding-right: 0px;
 }
 
-
 .item4{
     margin-right: 0px;
     margin-left: 0px;
@@ -490,9 +504,8 @@ align-content: center;
     margin-left: 0px;
 }
 
-
 }
-@media(max-width:414px){
+ @media(max-width:414px){
     header{
         width: 414px
 }
@@ -549,7 +562,9 @@ h5{
 #reloj{
    
     font-size: 11px;
-}
-}
+} 
+
+ }
+
 
 
