@@ -80,18 +80,23 @@ body{
   
 }
 .categorias{
+    text-align: left;
     text-decoration: none;
     color: #f6eedf;
     font-weight: 600;
     font-family: sans-serif;
     letter-spacing: 1px;
+   
 }
 .categoria{
     background: #c81912;
-    border-radius: 100px;
-    margin: 0 5px 5px 5px;
-    padding: 2px;
+    border-radius: 4px;
+    margin: 0px 10px;
+     padding: 5px 12px
+   
+
 }
+
  .encabezado{ 
     /* padding-top: 20px; */
     font-size: 11px;
@@ -375,7 +380,7 @@ align-content: center;
     border-radius: 4px;
     padding-top: 5px;
     margin: 0 5px 0 5px;
-    padding-bottom: 1px;
+    padding-bottom: 6px;
 }
 @media(max-width:1024px){
     header{

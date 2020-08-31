@@ -737,6 +737,36 @@ logo.addEventListener("click",function(){
   opciones[i].classList.toggle("desaparece")
    }
 })
+const cate=document.getElementsByClassName("categoria");
+const cate1=document.getElementsByClassName("CT1");
+// console.log(cate[0].checked)
+console.log(cate)
+ console.log(cate1)
+
+ addEventListener("load",function(){
+   for(var ñ=0;ñ<cate1.length;ñ++){
+     console.log(cate1[ñ].children[0].classList)
+     cate1[ñ].children[0].classList="none"
+    
+   }
+ })
+
+CT=()=>{
+      for(var u=0;u<cate1.length;u++){
+        console.log(cate1[u].children[0].children[0].checked)
+        
+        if(cate1[u].children[0].children[0].checked===true){
+     cate1[u].children[0].classList="categoria"
+         }else{
+          cate1[u].children[0].classList="none"
+         }
+      
+  
+ 
+  }
+  
+
+}
 
 // let produc = {
 //     tipo:"pantalon",
