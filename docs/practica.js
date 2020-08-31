@@ -751,22 +751,7 @@ console.log(cate)
    }
  })
 
-CT=()=>{
-      for(var u=0;u<cate1.length;u++){
-        console.log(cate1[u].children[0].children[0].checked)
-        
-        if(cate1[u].children[0].children[0].checked===true){
-     cate1[u].children[0].classList="categoria"
-         }else{
-          cate1[u].children[0].classList="none"
-         }
-      
-  
- 
-  }
-  
 
-}
 
 // let produc = {
 //     tipo:"pantalon",
@@ -798,6 +783,34 @@ addEventListener("keyup",function(){
          }
 })
 
+  CT=()=>{
+    var asd3=document.getElementsByClassName("anuncios");
+   
+    for(var w=0;w<asd3.length;w++){
+       var arr= new String(asd3[w].childNodes[3].innerHTML) 
+      //  console.log(cate1[w].children[0].children[0].value)
+       console.log(cate1[w].children[0].children[0].value===arr)
+       if(cate1[w].children[0].children[0].value=arr){
+         asd3[w].style.display="grid"
+       }
+    }
+      for(var u=0;u<cate1.length;u++){
+        
+        // console.log(cate1[u].children[0].children[0].checked)
+        // console.log(cate1[u].children[0].children[0].value) 
+       
+        if(cate1[u].children[0].children[0].checked===true){
+     cate1[u].children[0].classList="categoria"
+   
+         }else{
+          cate1[u].children[0].classList="none"
+         }
+    
   
+ 
+  }
+  
+
+}
 
 
