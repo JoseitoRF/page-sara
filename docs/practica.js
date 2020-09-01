@@ -785,14 +785,21 @@ addEventListener("keyup",function(){
 
   CT=()=>{
     var asd3=document.getElementsByClassName("anuncios");
-   
+  console.log(asd3.length)
     for(var w=0;w<asd3.length;w++){
+      //  console.log(asd3[w].childNodes[3].innerHTML)
+       var arr1=asd3[w].childNodes[3].innerHTML
        var arr= new String(asd3[w].childNodes[3].innerHTML) 
-      //  console.log(cate1[w].children[0].children[0].value)
-       console.log(cate1[w].children[0].children[0].value===arr)
-       if(cate1[w].children[0].children[0].value=arr){
-         asd3[w].style.display="grid"
+      // console.log(arr.split()) 
+      // console.log(cate1[w].children[0].children[0].value)
+       console.log(arr1===cate1[w].children[0].children[0].value)
+       if(arr1=cate1[w].children[0].children[0].value){
+        
+         asd3[w].style.display="none"
+       }else{
+        asd2[w].style.display="grid"
        }
+      
     }
       for(var u=0;u<cate1.length;u++){
         
