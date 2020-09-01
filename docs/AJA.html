@@ -25,7 +25,7 @@
     .genera{
     display: grid;
    grid-gap: 10px;
-    grid-template-rows:33% 33% 33%
+    grid-template-rows:500px
     
     
 }
@@ -35,8 +35,8 @@
      grid-row: 2/3;
      height: 324px;
      width: 100%;
-     margin-top: -709px;
-     /* margin-bottom: 56%; */
+     margin-top: 0px;
+     margin-bottom: 350px;
     }
     #Calen{
    height: 10px;
@@ -58,12 +58,12 @@
    }
    #compras{
      grid-row: 3/4;
-     margin-top: -320px;
-     width: 900px;
+     margin-top: -289px;
+     /* width: 900px; */
      
    }
    #prueba{
-     height: 40%;
+     height: 500px;
      padding-right: 20px;
      margin-bottom: 40px;
      grid-row: 1/2;
@@ -190,7 +190,7 @@ border-radius: 4px;
       </div>
    
      <form id="compras"action="">
-    <table  height="290px"  border="1" bordercolor="#f5f5f5" bgcolor="#07031a">
+    <table  height="290px" width="900px"  border="1" bordercolor="#f5f5f5" bgcolor="#07031a">
         <tr>
         <th>Producto</th>
         <th>Cantidad</th>
@@ -354,7 +354,7 @@ total.value=totall.substring(0,4)+"$"
 // Calendario.value="Enero"
   var btn=document.getElementById("bttn")
  btn.addEventListener("click",function(){ 
-   console.log(fechaEntrega.value)
+  //  console.log(fechaEntrega.value)
    if(fechaEntrega.value===""){
     
    }else{
@@ -375,20 +375,20 @@ total.value=totall.substring(0,4)+"$"
 
 let dia=[]
 let mes=[]
-console.log(dia.length)
+// console.log(dia.length)
 var numeros=document.getElementById("Numeros");
  
 DateC=()=>{
    var Calendario=document.getElementById("Calendario").value;
 
-   console.log(numeros)
+  //  console.log(numeros)
    switch(Calendario){
        case "Enero": 
         mes.splice(enero);
          var enero=01 
          mes.push(enero)
         
-           console.log(Calendario)
+          //  console.log(Calendario)
            numeros.innerHTML=`<tr>
            <td onclick="Fecha()" class="queta">1</td>
            <td onclick="Fecha()" class="queta">2</td>
@@ -434,7 +434,7 @@ DateC=()=>{
          </tr>`
        break;
        case "Febrero":
-           console.log(Calendario)
+          //  console.log(Calendario)
             mes.splice(febrero);
            var febrero=02
          mes.push(febrero)
@@ -479,7 +479,7 @@ DateC=()=>{
            <td onclick="Fecha()" class="queta">29</td>`
        break;
        case "Marzo":
-           console.log(Calendario)
+          //  console.log(Calendario)
            mes.splice(marzo);
            var marzo=03
          mes.push(marzo)
@@ -531,7 +531,7 @@ DateC=()=>{
        mes.splice(abril);
        var abril=04
          mes.push(abril)
-           console.log(Calendario)
+          //  console.log(Calendario)
            numeros.innerHTML=`<tr>
            <td onclick="Fecha()" class="queta">1</td>
            <td onclick="Fecha()" class="queta">2</td>
@@ -575,7 +575,7 @@ DateC=()=>{
          `
        break;
        case "Mayo":
-           console.log(Calendario)
+          //  console.log(Calendario)
            mes.splice(mayo);
            var mayo=05
          mes.push(mayo)
@@ -624,7 +624,7 @@ DateC=()=>{
          </tr>`
        break;
        case "Junio":
-           console.log(Calendario)
+          //  console.log(Calendario)
            mes.splice(junio);
            var junio=06
          mes.push(junio)
@@ -671,7 +671,7 @@ DateC=()=>{
         `
        break;
        case "Julio":
-           console.log(Calendario)
+          //  console.log(Calendario)
            mes.splice(julio);
            var julio=07
          mes.push(julio)
@@ -720,7 +720,7 @@ DateC=()=>{
          </tr>`
        break;
        case "Agosto":
-           console.log(Calendario)
+          //  console.log(Calendario)
            mes.splice(agosto);
            var agosto=08
          mes.push(agosto)
@@ -769,7 +769,7 @@ DateC=()=>{
          </tr>`
        break;
        case "Septiembre":
-           console.log(Calendario)
+          //  console.log(Calendario)
            mes.splice(septiembre);
            var septiembre=09
          mes.push(septiembre)
@@ -816,7 +816,7 @@ DateC=()=>{
        `
        break;
        case "Octubre":
-           console.log(Calendario) 
+          //  console.log(Calendario) 
            mes.splice(octubre);
            var octubre=10
           
@@ -866,7 +866,7 @@ DateC=()=>{
          </tr>`
        break;
        case "Noviembre":
-           console.log(Calendario)
+          //  console.log(Calendario)
            mes.splice(noviembre);
            var noviembre=11
          mes.push(noviembre)
@@ -913,7 +913,7 @@ DateC=()=>{
         `
        break;
        case "Diciembre":
-           console.log(Calendario)
+          //  console.log(Calendario)
            mes.splice(diciembre);
            var diciembre=12
          mes.push(diciembre)
@@ -963,7 +963,7 @@ DateC=()=>{
        break;
 
    }
-   console.log(mes)
+  //  console.log(mes)
 }
    DateC()
 
@@ -1280,7 +1280,7 @@ document.addEventListener("dblclick",function(e){
 
 
 
-console.log(dia)
+// console.log(dia)
    
 }
 
@@ -1293,8 +1293,8 @@ var prueba1=new Boolean(prueba.innerHTML)
 var btn=document.getElementById("bttn1");
 var fechaEntrega= document.getElementById("fechaE");
  fechaEntrega.value=""
-console.log(prueba1)
-console.log(Dia+" "+Mes+" "+ Año)
+// console.log(prueba1)
+// console.log(Dia+" "+Mes+" "+ Año)
 
 Comfirmar=()=>{
  var dios=document.addEventListener("click",function(e){
@@ -1306,7 +1306,7 @@ dia.push(A)
  
     // console.log(asd)
     var prueba2=new Boolean(Comfirmar())
-     console.log(prueba2)
+    //  console.log(prueba2)
    
 // if(prueba.innerHTML===){
 
@@ -1322,7 +1322,7 @@ dia.push(A)
     
   var example=document.getElementsByClassName("Numeros1")
   //  console.log(example.Numeros.childNodes[1].children) 
-   console.log(example[0].children[0].children)
+  //  console.log(example[0].children[0].children)
   var pt=example[0].children[0].children
   
    for(var i=0;i<pt.length;i++){
@@ -1334,8 +1334,8 @@ dia.push(A)
   //     var lu=prueba=mas[e].innerHTML
     if(prueba1=true && !prueba2==false){
        fechaEntrega.value=dia[0]+"/"+mes[0]+"/"+Año
-  console.log("paso")
-   console.log(prueba===mas[e].innerHTML)
+  // console.log("paso")
+  //  console.log(prueba===mas[e].innerHTML)
     }
     break
    }
