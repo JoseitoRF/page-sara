@@ -90,7 +90,7 @@ body{
    
 }
 .categoria{
-    background: rgba(0, 0, 0, 0.50);
+    background: rgba(0, 0, 0, 0.90);
     border-radius: 4px;
     margin: 0px 10px;
      padding: 5px 12px
@@ -371,7 +371,7 @@ align-content: center;
     
 } 
 .tabla{
-    background: rgba(0, 0, 0, 0.55);
+    background: #c81912;
     border-radius: 4px;
     padding-top: 5px;
     margin: 0 5px 0 5px;
@@ -444,7 +444,7 @@ padding-bottom: 10px;
    grid-column: 1/4;
    display: grid;
    grid-template-columns:16% 17% 16% 19% 17% 13%;
-   background: rgba(255, 255, 255, 0.30);
+   background: rgba(255, 255, 255, 0.50);
    border-radius: 4px;
    width: 97%;
    padding-left: 22px;
