@@ -737,11 +737,11 @@ logo.addEventListener("click",function(){
   opciones[i].classList.toggle("desaparece")
    }
 })
-const cate=document.getElementsByClassName("categoria");
+
 const cate1=document.getElementsByClassName("CT1");
 // console.log(cate[0].checked)
-console.log(cate)
- console.log(cate1)
+
+//  console.log(cate1)
 
  addEventListener("load",function(){
    for(var ñ=0;ñ<cate1.length;ñ++){
@@ -784,26 +784,9 @@ addEventListener("keyup",function(){
 })
 
   CT=()=>{
-    var asd3=document.getElementsByClassName("anuncios");
-  console.log(asd3.length)
-    for(var w=0;w<asd3.length;w++){
-      //  console.log(asd3[w].childNodes[3].innerHTML)
-       var arr1=asd3[w].childNodes[3].innerHTML
-       var arr= new String(asd3[w].childNodes[3].innerHTML) 
-      // console.log(arr.split()) 
-      // console.log(cate1[w].children[0].children[0].value)
-       console.log(arr1===cate1[w].children[0].children[0].value)
-       if(arr1=cate1[w].children[0].children[0].value){
+   for(var u=0;u<cate1.length;u++){
         
-         asd3[w].style.display="none"
-       }else{
-        asd2[w].style.display="grid"
-       }
-      
-    }
-      for(var u=0;u<cate1.length;u++){
-        
-        // console.log(cate1[u].children[0].children[0].checked)
+         console.log(cate1[u].children[0].children[0].checked)
         // console.log(cate1[u].children[0].children[0].value) 
        
         if(cate1[u].children[0].children[0].checked===true){
@@ -811,11 +794,40 @@ addEventListener("keyup",function(){
    
          }else{
           cate1[u].children[0].classList="none"
+
          }
     
   
  
   }
+
+
+
+    const cate=document.getElementsByClassName("categoria");
+    console.log(cate[0].children[0].value)
+    var asd3=document.getElementsByClassName("anuncios");
+  // console.log(asd3.length)
+    for(var w=0;w<asd3.length;w++){
+      //  console.log(asd3[w].childNodes[3].innerHTML)
+       var arr1=asd3[w].childNodes[3].innerHTML
+       var arr= new String(asd3[w].childNodes[3].innerHTML) 
+        //  console.log(arr1)
+         console.log(arr1.indexOf(cate[0].children[0].value))
+         console.log(arr1===cate[0].children[0].value)
+        //  console.log(cate1[w].children[0].children[0].value)
+        // console.log(arr.indexOf(cate1[w].children[0].children[0].value))
+        // console.log(arr.split()[0]) 
+        // console.log(cate1[w].children[0].children[0].value)
+        // console.log(arr1===cate1[w].children[0].children[0].value)
+
+       if(arr1===cate[0].children[0].value){
+        asd3[w].style.display="grid"
+       }else{
+         asd3[w].style.display="none"
+       }
+      
+    }
+   
   
 
 }
