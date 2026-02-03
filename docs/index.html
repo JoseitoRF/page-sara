@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara's Store - Moda y Estilo</title>
+    
+    <!-- Bootstrap 5 CSS (Diseño Responsivo) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome CDN (Iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Tus Estilos Propios -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. BARRA DE NAVEGACIÓN (NAVBAR) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-gem me-2"></i>Sara's
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+                <!-- Reloj en tiempo real -->
+                <div class="ms-3 text-white fw-bold" id="reloj">00:00:00</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. ENCABEZADO (HERO SECTION) -->
+    <header id="inicio" class="hero-section d-flex align-items-center justify-content-center text-center text-white">
+        <div class="bg-overlay"></div>
+        <div class="content position-relative px-3">
+            <h1 class="display-3 fw-bold">Moda que inspira</h1>
+            <p class="lead">Encuentra tu estilo único con nuestra nueva colección 2026.</p>
+            <a href="#productos" class="btn btn-danger btn-lg mt-3 shadow">Ver Colección</a>
+        </div>
+    </header>
+
+    <!-- 3. SECCIÓN PRINCIPAL: FILTROS Y PRODUCTOS -->
+    <div class="container mt-5 pt-4" id="productos">
+        <div class="row">
+            
+            <!-- BARRA LATERAL (FILTROS Y BUSCADOR) -->
+            <aside class="col-lg-3 mb-4">
+                <!-- Buscador -->
+                <div class="mb-4">
+                    <h5 class="mb-3">Buscar</h5>
+                    <div class="input-group">
+                        <input type="text" id="buscador" class="form-control" placeholder="Buscar producto...">
+                        <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <!-- Filtros de Categoría -->
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0"><i class="fas fa-filter me-2"></i>Categorías</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filter-check" type="checkbox" value="todos" id="cat-all" checked>
+                            <label class="form-check-label" for="cat-all">Ver Todo</label>
+                        </div>
+                        <hr>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filter-check" type="checkbox" value="zapatos" id="cat-shoes">
+                            <label class="form-check-label" for="cat-shoes">Zapatos</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filter-check" type="checkbox" value="ropa" id="cat-clothes">
+                            <label class="form-check-label" for="cat-clothes">Ropa</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input filter-check" type="checkbox" value="accesorios" id="cat-acc">
+                            <label class="form-check-label" for="cat-acc">Accesorios</label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- GRID DE PRODUCTOS -->
+            <main class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
+                    <h2 class="text-dark">Nuestros Productos</h2>
+                    <span class="badge bg-secondary" id="cantidad-productos">0 items</span>
+                </div>
+                
+                <!-- Aquí JavaScript insertará las tarjetas de productos -->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="contenedor-productos">
+                    <!-- Contenido dinámico -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- 4. SECCIÓN DE CONTACTO (NUEVA) -->
+    <section id="contacto" class="py-5 bg-light mt-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Ponte en Contacto</h2>
+                <p class="text-muted">¿Tienes alguna duda con tu pedido o quieres saber más?</p>
+                <div class="linea-decorativa mx-auto bg-danger" style="width: 60px; height: 3px;"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Columna Izquierda: Información y Mapa -->
+                <div class="col-lg-5">
+                    <div class="contact-info-box p-4 bg-white shadow-sm rounded h-100">
+                        <h4 class="mb-4">Información</h4>
+                        
+                        <div class="d-flex align-items-center mb-4 item-contacto">
+                            <div class="icon-box bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width:45px; height:45px;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Ubicación</h6>
+                                <small class="text-muted">Av. Principal de la Moda, Caracas, Venezuela</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-4 item-contacto">
+                            <div class="icon-box bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width:45px; height:45px;">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Llámanos</h6>
+                                <small class="text-muted">+58 412-123-4567</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-4 item-contacto">
+                            <div class="icon-box bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width:45px; height:45px;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Correo Electrónico</h6>
+                                <small class="text-muted">atencion@sarasstore.com</small>
+                            </div>
+                        </div>
+
+                        <!-- Mapa Embebido -->
+                        <div class="map-container mt-4 rounded overflow-hidden">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.368603699268!2d-66.91460168520266!3d10.496052392512608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5ed3d4253761%3A0x6288075218458763!2sPlaza%20Venezuela!5e0!3m2!1ses!2sve!4v1620000000000!5m2!1ses!2sve" 
+                                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Formulario -->
+                <div class="col-lg-7">
+                    <div class="contact-form-box p-5 bg-white shadow rounded h-100">
+                        <h4 class="mb-4">Envíanos un Mensaje</h4>
+                        
+                        <!-- Alerta de éxito (oculta por defecto) -->
+                        <div id="alerta-envio" class="alert alert-success d-none" role="alert">
+                            <i class="fas fa-check-circle me-2"></i> ¡Mensaje enviado con éxito!
+                        </div>
+
+                        <form id="form-contacto-real">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="nombreContacto" placeholder="Nombre" required>
+                                        <label for="nombreContacto">Tu Nombre</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="emailContacto" placeholder="Correo" required>
+                                        <label for="emailContacto">Tu Correo</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="asuntoContacto" placeholder="Asunto" required>
+                                        <label for="asuntoContacto">Asunto</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Mensaje" id="mensajeContacto" style="height: 150px" required></textarea>
+                                        <label for="mensajeContacto">¿En qué podemos ayudarte?</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-danger w-100 py-3 fw-bold">
+                                        <i class="fas fa-paper-plane me-2"></i> ENVIAR MENSAJE
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Sara's Store. Todos los derechos reservados.</p>
+            <small>Diseñado por Jose Fernandez | josefernandeznsc@gmail.com</small>
+        </div>
+    </footer>
+
+    <!-- 6. MODAL DE COMPRA (Ventana emergente) -->
+    <div class="modal fade" id="modalCompra" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title fw-bold">Completar Compra</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5 mb-3 mb-md-0">
+                            <img id="modal-img" src="" class="img-fluid rounded shadow-sm" alt="Producto">
+                        </div>
+                        <div class="col-md-7">
+                            <h3 id="modal-nombre" class="fw-bold">Nombre Producto</h3>
+                            <p id="modal-desc" class="text-muted">Descripción...</p>
+                            <h4 class="text-danger fw-bold" id="modal-precio">$0.00</h4>
+                            
+                            <hr>
+                            
+                            <form id="form-compra">
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <label class="form-label fw-bold">Cantidad</label>
+                                        <input type="number" class="form-control" id="modal-cantidad" value="1" min="1" max="10">
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label fw-bold">Talla</label>
+                                        <select class="form-select" id="modal-talla">
+                                            <option>S (Pequeño)</option>
+                                            <option>M (Mediano)</option>
+                                            <option>L (Grande)</option>
+                                            <option>XL (Extra Grande)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Fecha de Entrega</label>
+                                    <input type="date" class="form-control" id="modal-fecha" required>
+                                </div>
+
+                                <div class="bg-light p-3 rounded border">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Subtotal:</span> <span id="res-subtotal" class="fw-bold">$0.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Impuestos (10%):</span> <span id="res-impuesto" class="text-muted">$0.00</span>
+                                    </div>
+                                    <hr class="my-2">
+                                    <div class="d-flex justify-content-between text-danger fs-5 fw-bold">
+                                        <span>Total a Pagar:</span> <span id="res-total">$0.00</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success fw-bold px-4" onclick="finalizarCompra()">
+                        <i class="fas fa-check-circle me-2"></i>Confirmar Compra
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- Bootstrap Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tu archivo principal de lógica -->
+    <script src="main.js"></script>
+</body>
+</html>

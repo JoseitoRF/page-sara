@@ -1,0 +1,105 @@
+/* Importar fuente moderna */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section con imagen de fondo */
+.hero-section {
+    height: 60vh;
+    background-image: url('https://images.pexels.com/photos/994517/pexels-photo-994517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Oscurecer imagen */
+}
+
+/* Tarjetas de producto */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.product-img-container {
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.product-img-container img {
+    max-height: 100%;
+    width: auto;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* --- Estilos Sección Contacto --- */
+
+.linea-decorativa {
+    width: 60px;
+    height: 3px;
+    margin-top: 10px;
+}
+
+/* Cajas contenedoras */
+.contact-info-box, .contact-form-box {
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.contact-info-box:hover, .contact-form-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Iconos de contacto */
+.icon-box {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    flex-shrink: 0; /* Evita que el icono se aplaste */
+}
+
+.item-contacto {
+    transition: all 0.3s ease;
+}
+
+.item-contacto:hover {
+    transform: translateX(10px); /* Efecto de desplazamiento al pasar el mouse */
+}
+
+/* Mapa */
+.map-container iframe {
+    filter: grayscale(20%); /* Un toque grisáceo para que combine mejor */
+    transition: filter 0.3s ease;
+}
+
+.map-container:hover iframe {
+    filter: grayscale(0%);
+}
+
+/* Botones redes sociales */
+.btn-outline-dark.rounded-circle {
+    width: 35px;
+    height: 35px;
+    line-height: 22px; /* Centrar icono verticalmente */
+    text-align: center;
+}
